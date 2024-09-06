@@ -6,14 +6,14 @@
 |`Date`| 06/09/2025 |
 
 ## 1. Index
- * 1. Index
- * 2. Context
- * 3. Justifications
+ * 1.Index
+ * 2.Context
+ * 3.Justifications
     * 3.1 Performance and Scalability
     * 3.2 Development Flexibility
     * 3.3 Maintenance Flexibility
     * 3.4 Resilience and Fault Tolerance
- * 4. Decision
+ * 4.Decision
 
 ## 2. Context
 When designing a solution for a logistics system, we have to imagine that this system will have several users from different points. Som parts will certeainly be used much more than others ant these parts must correspond to the number of users, be resilient and be flexible.
