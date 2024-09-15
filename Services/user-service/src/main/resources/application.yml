@@ -1,0 +1,26 @@
+spring:
+    application:
+        name: 'user-service'
+    jackson:
+        serialization:
+            FAIL_ON_EMPTY_BEANS: false
+    datasource:
+        driver-class-name: org.postgresql.Driver
+        url: ${DATABASE_POSTGRES_URL:jdbc:postgresql://localhost:5432/user-database}
+        username: ${DATABASE_POSTGRES_USERNAME:user}
+        password: ${DATABASE_POSTGRES_PASSWORD:password}
+    flyway:
+        locations: classpath:/db/migration
+        enabled: true
+    jpa:
+        ddl_auto: none
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.PostgreSQLDialect
+        hibernate:
+            naming:
+                physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+server:
+    shutdown: graceful
+    port: ${SERVER_PORT:7000}
